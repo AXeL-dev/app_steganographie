@@ -1,0 +1,59 @@
+D:\app_steganographie\app_steganographie\app_steganographie\bin\Debug\app_steganographie.exe
+D:\app_steganographie\app_steganographie\app_steganographie\bin\Debug\app_steganographie.pdb
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.Acceuil.resources
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.Properties.Resources.resources
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.exe
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.pdb
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.MethodeChoose.resources
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.LSB.resources
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.recordSound.resources
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.CompareAudioFiles.resources
+D:\app_steganographie\app_steganographie\app_steganographie\bin\Debug\NAudio.dll
+D:\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.About.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.exe
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.pdb
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\bin\Debug\app_steganographie.exe
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\bin\Debug\app_steganographie.pdb
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\bin\Debug\NAudio.dll
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.About.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.Acceuil.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.CompareAudioFiles.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.LSB.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.MethodeChoose.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.Properties.Resources.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.RecordSound.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie\app_steganographie\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.exe
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.pdb
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\bin\Debug\app_steganographie.exe
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\bin\Debug\app_steganographie.pdb
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\bin\Debug\NAudio.dll
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\ResolveAssemblyReference.cache
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.About.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.Acceuil.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.CompareAudioFiles.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.LSB.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.MethodeChoose.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.Properties.Resources.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.RecordSound.resources
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\GenerateResource.read.1.tlog
+D:\prv\[new]\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\GenerateResource.write.1.tlog
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.pdb
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\bin\Debug\app_steganographie.exe
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\bin\Debug\app_steganographie.pdb
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\bin\Debug\NAudio.dll
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.csprojResolveAssemblyReference.cache
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.About.resources
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.Acceuil.resources
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.CompareAudioFiles.resources
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.LSB.resources
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.MethodeChoose.resources
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.Properties.Resources.resources
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.RecordSound.resources
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.csproj.GenerateResource.Cache
+D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.exe
