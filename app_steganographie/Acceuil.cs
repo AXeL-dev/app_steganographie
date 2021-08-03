@@ -611,18 +611,26 @@ namespace app_steganographie
                     replayAudioBtn.Enabled = false;
                 }
 
-                // lecture du fichier audio de façon async en utilisant un backgroundWorker
-                // (pour eviter le plantage de l'application)
-                if (!backgroundWorker1.IsBusy)
-                {
-                    backgroundWorker1.RunWorkerAsync(replayOn);
-                }
+                // lecture du fichier audio (async)
+                ToolsAndFunctions.playAudioFile(wavFileLabelTab1.Text);
 
-                // Thread de lecture (pour eviter le plantage de l'application)
-                /*
-                Thread playAudioThread = new Thread(new ParameterizedThreadStart(ToolsAndFunctions.playAudioFile));
-                playAudioThread.Start(wavFileLabelTab1.Text);
-                */
+                // A la fin de lecture du fichier
+                ToolsAndFunctions.audioPlaybackStop += (s, args) =>
+                {
+                    // changement de l'image + enable du boutton 'Lire'
+                    playAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
+                    playAudioBtn.Enabled = true;
+
+                    // changement de l'image + enable du boutton 'Relire..'
+                    if (replayOn)
+                    {
+                        replayAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
+                        replayAudioBtn.Enabled = true;
+                    }
+
+                    // focus sur l'onglet actuel
+                    this.tabControl1.SelectedTab.Focus();
+                };
             }
             else
                 MessageBox.Show("Aucun fichier audio séléctionné !", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -652,18 +660,17 @@ namespace app_steganographie
                 playAudioBtn2.Image = app_steganographie.Properties.Resources.loader;
                 playAudioBtn2.Enabled = false;
 
-                // lecture du fichier audio de façon async en utilisant un backgroundWorker
-                // (pour eviter le plantage de l'application)
-                if (!backgroundWorker2.IsBusy)
+                // lecture du fichier audio (async)
+                ToolsAndFunctions.playAudioFile(wavFileLabelTab2.Text);
+                ToolsAndFunctions.audioPlaybackStop += (s, args) =>
                 {
-                    backgroundWorker2.RunWorkerAsync();
-                }
+                    // changement de l'image + enable du boutton 'Lire'
+                    playAudioBtn2.Image = app_steganographie.Properties.Resources.media_play_icon;
+                    playAudioBtn2.Enabled = true;
 
-                // Thread de lecture (pour eviter le plantage de l'application)
-                /*
-                Thread playAudioThread = new Thread(new ParameterizedThreadStart(ToolsAndFunctions.playAudioFile));
-                playAudioThread.Start(wavFileLabelTab2.Text);
-                */
+                    // focus sur l'onglet actuel
+                    this.tabControl1.SelectedTab.Focus();
+                };
             }
             else
                 MessageBox.Show("Aucun fichier audio séléctionné !", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -775,39 +782,11 @@ namespace app_steganographie
             e.Result = e.Argument;
         }
 
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        // event. click on 'Arrêter' in MenuStrip1 
+        private void arrêterToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            bool replayOn = (bool)e.Result;
-
-            // changement de l'image + enable du boutton 'Lire'
-            playAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
-            playAudioBtn.Enabled = true;
-
-            // changement de l'image + enable du boutton 'Relire..'
-            if (replayOn)
-            {
-                replayAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
-                replayAudioBtn.Enabled = true;
-            }
-
-            // focus sur l'onglet actuel
-            this.tabControl1.SelectedTab.Focus();
-        }
-
-        private void backgroundWorker2_DoWork(object sender, DoWorkEventArgs e)
-        {
-            // lecture du fichier audio
-            ToolsAndFunctions.playAudioFile(wavFileLabelTab2.Text);
-        }
-
-        private void backgroundWorker2_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            // changement de l'image + enable du boutton 'Lire'
-            playAudioBtn2.Image = app_steganographie.Properties.Resources.media_play_icon;
-            playAudioBtn2.Enabled = true;
-
-            // focus sur l'onglet actuel
-            this.tabControl1.SelectedTab.Focus();
+            // arrêter la lecture du fichier en cours
+            ToolsAndFunctions.stopAudioFile();
         }
     }
 }
