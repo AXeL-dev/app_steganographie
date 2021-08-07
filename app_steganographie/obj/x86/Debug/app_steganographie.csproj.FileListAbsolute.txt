@@ -57,3 +57,16 @@ D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganograp
 D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.RecordSound.resources
 D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.csproj.GenerateResource.Cache
 D:\2.prg\[C#]\app_steganographie\app_steganographie [New Design]\app_steganographie\obj\x86\Debug\app_steganographie.exe
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.exe
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.pdb
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\bin\Debug\app_steganographie.exe
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\bin\Debug\app_steganographie.pdb
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.csprojResolveAssemblyReference.cache
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.About.resources
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.Acceuil.resources
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.CompareAudioFiles.resources
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.LSB.resources
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.MethodeChoose.resources
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.Properties.Resources.resources
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.RecordSound.resources
+C:\Users\Abdelhakim\Desktop\app_steganographie\app_steganographie\obj\x86\Debug\app_steganographie.csproj.GenerateResource.Cache

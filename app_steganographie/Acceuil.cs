@@ -255,7 +255,7 @@ namespace app_steganographie
                 // on commence le calcul du temp d'éxecution
                 Stopwatch sw = new Stopwatch();
                 sw.Start();
-            
+
                 // conversion du fichier audio en block de 2/4 bits
                 string[] fileBitBlocks = ToolsAndFunctions.bytesToBlocks(fileBytes, nombreDeBit);
 
@@ -272,7 +272,7 @@ namespace app_steganographie
                     Random rnd = new Random();
 
                     // Etape 1 : Position aléatoire
-                    
+
                     // on parcours les blocks du texte à cacher
                     for (int i = 0; i < textBitBlocks.Length; i++)
                     {
@@ -282,7 +282,7 @@ namespace app_steganographie
                         fitness[i] = ToolsAndFunctions.fitness(textBitBlocks[i], fileBitBlocks[randomPos[i]]);
                         //MessageBox.Show(fitness[i].ToString());
                     }
-                    
+
                     // Etape 2 : Vérification de la fitness de chaque bloc, puis recherche au voisinage si fitness != 0
 
                     // on parcours les blocks du texte à cacher
@@ -523,14 +523,14 @@ namespace app_steganographie
 
                 // Recherche dans les blocks du fichier audio
                 string texteCachee = "";
-                
+
                 // on parcours toutes les positions pour reconstituer le texte caché
                 for (int i = 1; i < positions.Length - 1; i += (8 / nombreDeBit)) // de 1 => première position contient le hash, 8(bits) / 4(bits par block) = 2 , -1 du dernier '|'
                 {
                     string Blocks = ""; // contiendra 2 bloc si codage sur (4bit) ou 4 bloc si codage sur (2bit)
                     for (int j = 0; j < (8 / nombreDeBit); j++)
-                        Blocks += fileBitBlocks[Convert.ToInt32(positions[i+j])];
-                    
+                        Blocks += fileBitBlocks[Convert.ToInt32(positions[i + j])];
+
                     //MessageBox.Show(positions.Length.ToString() + "," + i.ToString() + "," + texteCachee);
                     texteCachee += ToolsAndFunctions.BlocksToString(Blocks);
                 }
@@ -611,28 +611,26 @@ namespace app_steganographie
                     replayAudioBtn.Enabled = false;
                 }
 
-                // lecture du fichier audio
+                // lecture du fichier audio (async)
                 ToolsAndFunctions.playAudioFile(wavFileLabelTab1.Text);
 
-                // Thread de lecture (pour eviter le plantage de l'application)
-                /*
-                Thread playAudioThread = new Thread(new ParameterizedThreadStart(ToolsAndFunctions.playAudioFile));
-                playAudioThread.Start(wavFileLabelTab1.Text);
-                */
-
-                // changement de l'image + enable du boutton 'Lire'
-                playAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
-                playAudioBtn.Enabled = true;
-
-                // changement de l'image + enable du boutton 'Relire..'
-                if (replayOn)
+                // A la fin de lecture du fichier
+                ToolsAndFunctions.audioPlaybackStop += (s, args) =>
                 {
-                    replayAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
-                    replayAudioBtn.Enabled = true;
-                }
+                    // changement de l'image + enable du boutton 'Lire'
+                    playAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
+                    playAudioBtn.Enabled = true;
 
-                // focus sur l'onglet actuel
-                this.tabControl1.SelectedTab.Focus();
+                    // changement de l'image + enable du boutton 'Relire..'
+                    if (replayOn)
+                    {
+                        replayAudioBtn.Image = app_steganographie.Properties.Resources.media_play_icon;
+                        replayAudioBtn.Enabled = true;
+                    }
+
+                    // focus sur l'onglet actuel
+                    this.tabControl1.SelectedTab.Focus();
+                };
             }
             else
                 MessageBox.Show("Aucun fichier audio séléctionné !", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -662,21 +660,17 @@ namespace app_steganographie
                 playAudioBtn2.Image = app_steganographie.Properties.Resources.loader;
                 playAudioBtn2.Enabled = false;
 
-                // lecture du fichier audio
+                // lecture du fichier audio (async)
                 ToolsAndFunctions.playAudioFile(wavFileLabelTab2.Text);
+                ToolsAndFunctions.audioPlaybackStop += (s, args) =>
+                {
+                    // changement de l'image + enable du boutton 'Lire'
+                    playAudioBtn2.Image = app_steganographie.Properties.Resources.media_play_icon;
+                    playAudioBtn2.Enabled = true;
 
-                // Thread de lecture (pour eviter le plantage de l'application)
-                /*
-                Thread playAudioThread = new Thread(new ParameterizedThreadStart(ToolsAndFunctions.playAudioFile));
-                playAudioThread.Start(wavFileLabelTab2.Text);
-                */
-
-                // changement de l'image + enable du boutton 'Lire'
-                playAudioBtn2.Image = app_steganographie.Properties.Resources.media_play_icon;
-                playAudioBtn2.Enabled = true;
-
-                // focus sur l'onglet actuel
-                this.tabControl1.SelectedTab.Focus();
+                    // focus sur l'onglet actuel
+                    this.tabControl1.SelectedTab.Focus();
+                };
             }
             else
                 MessageBox.Show("Aucun fichier audio séléctionné !", "Stop", MessageBoxButtons.OK, MessageBoxIcon.Stop);
@@ -779,6 +773,20 @@ namespace app_steganographie
             {
                 this.Cursor = Cursors.Default;
             }
+        }
+
+        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            // lecture du fichier audio
+            ToolsAndFunctions.playAudioFile(wavFileLabelTab1.Text);
+            e.Result = e.Argument;
+        }
+
+        // event. click on 'Arrêter' in MenuStrip1 
+        private void arrêterToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // arrêter la lecture du fichier en cours
+            ToolsAndFunctions.stopAudioFile();
         }
     }
 }

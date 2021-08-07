@@ -6,11 +6,20 @@ using System.Security.Cryptography;
 using System.Media; // to play .wav files
 using System.Windows.Forms; // to show MessageBox
 using System.IO;
+using NAudio.Wave;
 
 namespace app_steganographie
 {
     class ToolsAndFunctions
     {
+        // attributes
+        private static WaveOutEvent outputDevice;
+        private static AudioFileReader audioFile;
+        private static string audioFilePath;
+
+        // events
+        public static event EventHandler audioPlaybackStop;
+
         // function to generate random password
         public static string createPassword(int length)
         {
@@ -82,12 +91,64 @@ namespace app_steganographie
         {
             try
             {
-                SoundPlayer audioFile = new SoundPlayer(filePath);//filePath.ToString());
-                audioFile.PlaySync();
+                // On vérifie si on a pas déjà le chemin du fichier à lire
+                if (audioFilePath == null || audioFilePath != filePath)
+                {
+                    audioFilePath = filePath;
+                }
+
+                // On vérifie si le lecteur existe déjà
+                if (outputDevice == null)
+                {
+                    // On initialise le lecteur
+                    outputDevice = new WaveOutEvent();
+                    outputDevice.PlaybackStopped += (s, e) => onAudioPlaybackStop();
+                }
+
+                // On initialise le stream du fichier audio à lire
+                audioFile = new AudioFileReader(audioFilePath);
+                outputDevice.Init(audioFile);
+
+                // lecture
+                outputDevice.Play();
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // function to stop audio wav files
+        public static void stopAudioFile()
+        {
+            try
+            {
+                // si le lecteur exist on l'arrête
+                if (outputDevice != null)
+                    outputDevice.Stop();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erreur", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        // function to execute at audio playback stop
+        private static void onAudioPlaybackStop()
+        {
+            // On execute le handler si défini
+            if (audioPlaybackStop != null)
+                audioPlaybackStop(outputDevice, new EventArgs());
+            // On libère les resources
+            if (outputDevice != null)
+            {
+                outputDevice.Dispose();
+                outputDevice = null;
+            }
+            if (audioFile != null)
+            {
+                audioFile.Dispose();
+                audioFile = null;
             }
         }
 

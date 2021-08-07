@@ -34,6 +34,7 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.parcourirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lireToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.arrêterToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.exitToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -195,6 +196,7 @@
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.parcourirToolStripMenuItem,
             this.lireToolStripMenuItem,
+            this.arrêterToolStripMenuItem,
             this.toolStripSeparator1,
             this.exitToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
@@ -205,7 +207,7 @@
             // 
             this.parcourirToolStripMenuItem.Image = global::app_steganographie.Properties.Resources.folder_open;
             this.parcourirToolStripMenuItem.Name = "parcourirToolStripMenuItem";
-            this.parcourirToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.parcourirToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.parcourirToolStripMenuItem.Text = "&Parcourir..";
             this.parcourirToolStripMenuItem.Click += new System.EventHandler(this.parcourirToolStripMenuItem_Click);
             // 
@@ -213,19 +215,28 @@
             // 
             this.lireToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("lireToolStripMenuItem.Image")));
             this.lireToolStripMenuItem.Name = "lireToolStripMenuItem";
-            this.lireToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.lireToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Space)));
+            this.lireToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.lireToolStripMenuItem.Text = "Lire";
             this.lireToolStripMenuItem.Click += new System.EventHandler(this.lireToolStripMenuItem_Click);
+            // 
+            // arrêterToolStripMenuItem
+            // 
+            this.arrêterToolStripMenuItem.Name = "arrêterToolStripMenuItem";
+            this.arrêterToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.End)));
+            this.arrêterToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.arrêterToolStripMenuItem.Text = "Arrêter";
+            this.arrêterToolStripMenuItem.Click += new System.EventHandler(this.arrêterToolStripMenuItem_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(132, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(167, 6);
             // 
             // exitToolStripMenuItem
             // 
             this.exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            this.exitToolStripMenuItem.Size = new System.Drawing.Size(135, 22);
+            this.exitToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.exitToolStripMenuItem.Text = "&Fermer";
             this.exitToolStripMenuItem.Click += new System.EventHandler(this.exitToolStripMenuItem_Click);
             // 
@@ -942,8 +953,8 @@
             // 
             // tableLayoutPanel3
             // 
-            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
-                        | System.Windows.Forms.AnchorStyles.Right)));
+            this.tableLayoutPanel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.tableLayoutPanel3.ColumnCount = 2;
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100F));
             this.tableLayoutPanel3.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
@@ -1194,7 +1205,7 @@
             this.tableLayoutPanel14.Name = "tableLayoutPanel14";
             this.tableLayoutPanel14.RowCount = 1;
             this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100F));
-            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 26F));
+            this.tableLayoutPanel14.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 29F));
             this.tableLayoutPanel14.Size = new System.Drawing.Size(658, 29);
             this.tableLayoutPanel14.TabIndex = 10;
             // 
@@ -1544,6 +1555,7 @@
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel18;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel21;
         private System.Windows.Forms.TableLayoutPanel tableLayoutPanel22;
+        private System.Windows.Forms.ToolStripMenuItem arrêterToolStripMenuItem;
     }
 }
 
